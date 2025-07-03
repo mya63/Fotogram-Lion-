@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liongram</title>
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml" />
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body onload="renderImages()">
+  <header>
+    <img src="img/Fotogram_Logo.svg" alt="Logo" />
+    <h1>Liongram</h1>
+  </header>
+
+  <main>
+  <div class="content-wrapper" id="imageContainer"></div>
+</main>
+
+  <footer>© 2025 Liongram by Muhammed Yunus Amini (Developer Akademie)</footer>
+
+  <div onclick="toggleOverlay()" id="overlay" class="overlay">
+    <div class="overlay-content" onclick="event.stopPropagation()">
+      <img id="overlayImage" src="" alt="Zoom" />
+      <div class="overlay-controls">
+        <button onclick="prevImage(event)">◀️</button>
+        <span id="overlayText"></span>
+        <button onclick="nextImage(event)">▶️</button>
+        <button onclick="toggleOverlay()">❌</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
