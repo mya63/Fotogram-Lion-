@@ -1,4 +1,3 @@
-
 const images = [
   "img/lion1.avif", 
   "img/lion2.avif", 
