@@ -15,7 +15,6 @@ const images = [
 
 let currentIndex = 0;
 
-
  function renderImages() {
   const container = document.getElementById("imageContainer");
   let html = "";
@@ -30,7 +29,6 @@ let currentIndex = 0;
 
   container.innerHTML = html;
 }
-
 
 function showOverlay(index) {
   currentIndex = index;
@@ -51,7 +49,6 @@ function prevImage(event) {
   currentIndex = (currentIndex - 1 + images.length) % images.length;
   showOverlay(currentIndex);
 }
-
 
 function nextImage(event) {
   event.stopPropagation();
