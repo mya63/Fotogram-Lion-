@@ -3,99 +3,123 @@ body {
   margin: 0;
   font-family: Arial, sans-serif;
   background-color: #06142e;
-  color: white;
+  color: #fff;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+
 header {
   display: flex;
   align-items: center;
-  padding: 20px;
-  background-color: #0c1c3d;
+  padding: 20px 40px;
+  background-color: #081a36;
 }
 
 header img {
-  height: 32px;
-  margin-right: 12px;
+  height: 40px;
+  margin-right: 10px;
 }
 
-h1 {
+header h1 {
+  font-size: 24px;
+  font-weight: bold;
   margin: 0;
-  font-size: 20px;
 }
+
 
 main {
-  flex-grow: 1;
+  flex: 1;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
 }
 
 .content-wrapper {
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 20px;
+  justify-content: center;
+  gap: 20px;
 }
 
-.image-tile {
-  width: 80px;
-  height: 80px;
-  border-radius: 12px;
-  overflow: hidden;
+
+.image-tile img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.2s;
   cursor: pointer;
-  transition: transform 0.2s ease;
 }
 
-.image-tile:hover {
+.image-tile img:hover {
   transform: scale(1.05);
 }
 
-.image-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .overlay {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
   display: none;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   z-index: 999;
 }
 
 .overlay-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
+  text-align: center;
+  position: relative;
 }
 
-.overlay img {
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 20px;
+#overlayImage {
+  max-width: 90vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
+
 
 .overlay-controls {
   display: flex;
-  gap: 16px;
-  align-items: center;
-  color: white;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 10px;
 }
 
-footer {
-  padding: 15px;
+.overlay-controls button {
+  padding: 6px 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.overlay-controls button:hover {
+  background-color: #ddd;
+}
+
+#overlayText {
+  display: inline-block;
+  min-width: 80px;
   text-align: center;
-  background-color: #0c1c3d;
-  color: #aaa;
+  font-weight: bold;
+  color: #fff;
+}
+
+
+footer {
+  background-color: #081a36;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  color: #ccc;
 }
